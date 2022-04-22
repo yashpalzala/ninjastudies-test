@@ -20,6 +20,9 @@ class _MsgInputBoxState extends State<MsgInputBox> {
   void _listen() async {
     if (!_isListening) {
       bool available = await _speech.initialize(
+        debugLogging: true,
+        options: [stt.SpeechToText.androidIntentLookup],
+        finalTimeout: const Duration(seconds: 5),
         onStatus: (val) {
           // use log to print only in debug mode
           log('onStatus: $val');
