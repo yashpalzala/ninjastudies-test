@@ -1,16 +1,22 @@
 # ninjastudies
 
-A new Flutter project.
+Intro - 
+This is a grammar tutor MVP. 
+There is an API which gives us a static conversation between a human and a chat bot.
+We need analyze the human messages and provides suggestions and corrections 
 
-## Getting Started
+*Unique feature - Speech to text is supported.*
 
-This project is a starting point for a Flutter application.
+##Usability - Click on the mic icon and speak after done speaking the text will be shown in the text box which can be modified or     sent directly.
 
-A few resources to get you started if this is your first Flutter project:
+If the human gives correct answer (as referenced from the static conversation) than bot will continue with next dialog without giving 
+any suggestions or corrections.
+But if the human answer is not at par with the static conversation provided by API we need to suggest what was wrong with the answer to the human in a chat format.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Cases covered for checking and suggesting:
+If human has -
+1. missed a word, suggest the missing word. (Extra- Multiple missing words case covered).
+2. given a wrong word, suggest the correct word. (Extra- Multiple wrong words case covered).
+3. given totally incorrect answer, show " I didn't understood"
+4. Provide with the correct sentence after two attempts.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
